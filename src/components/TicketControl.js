@@ -1,5 +1,6 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import TicketList from "./TicketList";
+import NewTicketForm from "./NewTicketForm";
 
 class TicketControl extends React.Component {
 
