@@ -16,6 +16,9 @@ class TicketControl extends React.Component {
       selectedTicket: null
     };
   }
+  // Our first state slice determines whether or not a form should show on the page. It is local state.
+  // Our second state slice holds the list of all tickets. It is shared state.
+  // Our third state slice will determine whether our TicketDetail component should show or not.
 
   handleClick = () => {
     this.setState(prevState => ({
