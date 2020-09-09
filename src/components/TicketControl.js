@@ -1,6 +1,7 @@
 import React from "react";
 import TicketList from "./TicketList";
 import NewTicketForm from "./NewTicketForm";
+import TicketDetail from './TicketDetail';
 
 class TicketControl extends React.Component {
 
