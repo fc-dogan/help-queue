@@ -32,6 +32,11 @@ class TicketControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
+  handleChangingSelectedTicket = (id) => {
+    const newSelectedTicket = this.state.masterTicketList.filter(ticket => ticket.id === id)[0];
+    // Because filter() returns an array, we need to specify that we want the first (and only element) in that array. We use bracket notation to do that.
+    this.setState({selectedTicket: newSelectedTicket})
+  }
 
   render(){
     let currentlyVisibleState = null;
