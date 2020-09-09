@@ -6,6 +6,7 @@ function Ticket(props){
   return (
     <React.Fragment>
       <div onClick= {() => props.whenTicketClicked(props.id)}>
+        {/* we need to use an arrow function so the expression isn't evaluated immediately. We pass in the ticket's id via props.id. */}
         <h3>{props.location} - {props.names}</h3>
         <p><em>{props.issue}</em></p>  
         <hr/>

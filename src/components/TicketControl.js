@@ -12,7 +12,8 @@ class TicketControl extends React.Component {
       masterTicketList: [
         {names: 'Sleater and Kinney',
         location: '4B',
-        issue: 'Prop types are throwing an error.'}
+        issue: 'Prop types are throwing an error.'},
+        
       ],
       selectedTicket: null
     };
