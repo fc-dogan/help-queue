@@ -7,7 +7,12 @@ class TicketControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      masterTicketList: [
+        {names: 'Sleater and Kinney',
+        location: '4B',
+        issue: 'Prop types are throwing an error.'}
+      ]
     };
   }
 
@@ -17,6 +22,8 @@ class TicketControl extends React.Component {
     }));
   }
 
+
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;; 
@@ -24,7 +31,7 @@ class TicketControl extends React.Component {
       currentlyVisibleState = <NewTicketForm />;
       buttonText = "Return to Ticket List";
     } else {
-      currentlyVisibleState = <TicketList />
+      currentlyVisibleState = <TicketList ticketList={this.state.masterTicketList} />
       buttonText = "Add Ticket";
     }
     return (
