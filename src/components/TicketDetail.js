@@ -9,8 +9,8 @@ function TicketDetail(props){
       <p>Ticket detail</p>
       <h3>{ticket.location} - {ticket.names}</h3>
       <p><em>{ticket.issue}</em></p>
-      <button onClick={() => onClickingDelete(ticket.id) }>Update Ticket</button>
-      <button onClick={() => onClickingEdit(ticket.id) }>Close Ticket</button>
+      <button onClick={() => onClickingDelete(ticket.id) }>Close Ticket</button>
+      <button onClick={() => onClickingEdit(ticket.id) }>Update Ticket</button>
       <hr/>
     </React.Fragment>
   );
