@@ -59,9 +59,9 @@ class TicketControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.selectedTicket != null) {
-      currentlyVisibleState = <TicketDetail ticket = {this.state.selectedTicket} />
+      currentlyVisibleState = <TicketDetail ticket = {this.state.selectedTicket} onClickingDelete = {this.handleDeletingTicket} />
       buttonText = "Return to Ticket List";
-      // While our TicketDetail component only takes placeholder data, we will eventually be passing the value of selectedTicket as a prop.
+  
     } else if (this.state.formVisibleOnPage){
       currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList} />;
       buttonText = "Return to Ticket List";
