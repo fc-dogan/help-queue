@@ -23,9 +23,16 @@ class TicketControl extends React.Component {
   // Our third state slice will determine whether our TicketDetail component should show or not.
 
   handleClick = () => {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+    if (this.state.selectedTicket != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedTicket: null
+      });
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+      }));
+    }
   }
 
   handleAddingNewTicketToList = (newTicket) => {
