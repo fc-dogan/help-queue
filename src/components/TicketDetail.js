@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function TicketDetail(props){
   const { ticket } = props;
-  //  to derive the ticket object from our props
+  //  object destructuring to derive the ticket object from our props
   return(
     <React.Fragment>
       <p>Ticket detail</p>
