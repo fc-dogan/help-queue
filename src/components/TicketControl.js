@@ -12,10 +12,10 @@ class TicketControl extends React.Component {
       masterTicketList: [
         {names: 'Sleater and Kinney',
         location: '4B',
-        issue: 'Prop types are throwing an error.'},
-        
-      ],
-      selectedTicket: null
+        issue: 'Prop types are throwing an error.'}
+        ],
+        selectedTicket: null,
+        editingTicket: false
     };
   }
   // Our first state slice determines whether or not a form should show on the page. It is local state.
@@ -54,6 +54,8 @@ class TicketControl extends React.Component {
       selectedTicket: null
     })
   }
+
+
 
   render(){
     let currentlyVisibleState = null;
